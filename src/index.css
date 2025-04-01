@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root {
+    --primary-clr: #2457B6;
+    --accent-clr: #a63d40;
+    --light-clr: #fcf9ee;
+    --dark-clr: #292929;
+}
+
+@theme {
+    --color-primary-clr: var(--primary-clr);
+    --color-accent-clr: var(--accent-clr);
+    --color-light-clr: var(--light-clr);
+    --color-dark-clr: var(--dark-clr);
+}
+
+body {
+    background-color: var(--light-clr);
+    color: var(--dark-clr);
+}
