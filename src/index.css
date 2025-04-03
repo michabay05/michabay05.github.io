@@ -7,11 +7,25 @@
     --dark-clr: #292929;
 }
 
+@font-face {
+    font-family: "Figtree";
+    src: url("./fonts/Figtree_Var.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Delius";
+    src: url("./fonts/Delius-Regular.ttf") format("truetype");
+}
+
 @theme {
     --color-primary-clr: var(--primary-clr);
     --color-accent-clr: var(--accent-clr);
     --color-light-clr: var(--light-clr);
     --color-dark-clr: var(--dark-clr);
+
+    --font-delius: "Delius", sans-serif;
+    --font-figtree: "Figtree", sans-serif;
+    --font-sans: var(--font-figtree);
 }
 
 body {
