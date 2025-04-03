@@ -1,15 +1,12 @@
 import { JSX } from "react"
 
-// Use figtree font
-// Source: https://fonts.google.com/specimen/Figtree
-
 export default function App(): JSX.Element {
     return (
         <>
             <nav className="bg-primary-clr">
                 <div className="mx-auto px-7 py-5 flex justify-between">
                     <h1 className="text-lg font-bold font-figtree text-light-clr">@michabay05</h1>
-                    <div className="flex min-w-1/5 justify-around">
+                    <div className="flex min-w-1/4 justify-around">
                         <a href="https://github.com/michabay05">
                             <GithubIcon twclasses="text-light-clr"/>
                         </a>
@@ -96,9 +93,9 @@ function ProjectCard(props: ProjectCardProp): JSX.Element {
             </p>
 
             <StyledButton extraTWclasses="mb-4">
-                <a href={props.link} className="flex justify-around mx-auto">
-                    <p className="">Explore</p>
-                    <VisitLink />
+                <a href={props.link} className="flex justify-center mx-auto">
+                    <p className="mr-3">Explore</p>
+                    <RedirectIcon />
                 </a>
             </StyledButton>
         </div>
@@ -125,47 +122,35 @@ function StyledButton(props: ButtonProp): JSX.Element {
 }
 
 interface IconProp {
-    twclasses: string;
+    twclasses?: string;
 }
 
-// Source: https://lucide.dev/icons/github
+// Source: https://icons.getbootstrap.com/icons/github/
 function GithubIcon(props: IconProp): JSX.Element {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-            viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-            className={props.twclasses}>
-            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
-            <path d="M9 18c-4.51 2-5-2-7-2"/>
+            fill="currentColor" viewBox="0 0 16 16" className={props.twclasses}>
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
         </svg>
     )
 }
 
-// Source: https://www.svgrepo.com/svg/108614/linkedin
+// Source: https://icons.getbootstrap.com/icons/linkedin/
 function LinkedInIcon(props: IconProp): JSX.Element {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" height="24"
-            width="24" version="1.1" id="Layer_1" viewBox="0 0 310 310"
-            className={props.twclasses}>
-                <g id="XMLID_801_">
-                    <path id="XMLID_802_" d="M72.16,99.73H9.927c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5H72.16c2.762,0,5-2.238,5-5V104.73   C77.16,101.969,74.922,99.73,72.16,99.73z"/>
-                    <path id="XMLID_803_" d="M41.066,0.341C18.422,0.341,0,18.743,0,41.362C0,63.991,18.422,82.4,41.066,82.4   c22.626,0,41.033-18.41,41.033-41.038C82.1,18.743,63.692,0.341,41.066,0.341z"/>
-                    <path id="XMLID_804_" d="M230.454,94.761c-24.995,0-43.472,10.745-54.679,22.954V104.73c0-2.761-2.238-5-5-5h-59.599   c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5h62.097c2.762,0,5-2.238,5-5v-98.918c0-33.333,9.054-46.319,32.29-46.319   c25.306,0,27.317,20.818,27.317,48.034v97.204c0,2.762,2.238,5,5,5H305c2.762,0,5-2.238,5-5V194.995   C310,145.43,300.549,94.761,230.454,94.761z"/>
-                </g>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            fill="currentColor" viewBox="0 0 16 16" className={props.twclasses}>
+            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
         </svg>
     );
 }
 
-function VisitLink(): JSX.Element {
-    // Source: https://lucide.dev/icons/external-link
+// Source: https://icons.getbootstrap.com/icons/chevron-right/
+function RedirectIcon(props: IconProp): JSX.Element {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-            viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-            className="">
-            <path d="M15 3h6v6"/>
-            <path d="M10 14 21 3"/>
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            fill="currentColor" viewBox="0 0 16 16" className={props.twclasses}>
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
         </svg>
     );
 }
