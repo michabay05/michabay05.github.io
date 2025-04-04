@@ -6,7 +6,7 @@ export default function App(): JSX.Element {
             <nav className="bg-primary-clr">
                 <div className="mx-auto px-7 py-5 flex justify-between">
                     <h1 className="text-lg font-bold font-figtree text-light-clr">@michabay05</h1>
-                    <div className="flex min-w-1/4 justify-around">
+                    <div className="flex min-w-1/4 justify-evenly">
                         <a href="https://github.com/michabay05">
                             <GithubIcon twclasses="text-light-clr"/>
                         </a>
@@ -30,7 +30,7 @@ export default function App(): JSX.Element {
             </main>
 
             <section className="bg-primary-clr text-light-clr py-8">
-                <div className="container mx-auto">
+                <div className="mx-auto md:max-w-xl">
                     <h3 className="text-center text-2xl font-bold mb-7">
                         Recent Projects
                     </h3>
