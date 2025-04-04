@@ -30,11 +30,11 @@ export default function App(): JSX.Element {
             </main>
 
             <section className="bg-primary-clr text-light-clr py-8">
-                <div className="mx-auto md:max-w-xl">
+                <div className="mx-auto md:max-w-xl lg:max-w-3xl">
                     <h3 className="text-center text-2xl font-bold mb-7">
                         Recent Projects
                     </h3>
-                    <div className="flex flex-col gap-y-6 justify-center px-8">
+                    <div className="flex flex-col lg:flex-row gap-y-6 lg:gap-x-6 justify-center px-8">
                         <ProjectCard
                             title="HazeChess"
                             textForLink="michabay05/haze-chess"
