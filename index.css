@@ -1,0 +1,27 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2em;
+}
+
+#cta-desc {
+    width: 80%;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.cta-div {
+    display: flex;
+    justify-content: center;
+}
+
+.cta-btn {
+    padding: 1em 2em;
+    margin-inline: 1em;
+
+    border: 2px solid var(--txt-color);
+    border-radius: 8px;
+    text-decoration: none;
+}
